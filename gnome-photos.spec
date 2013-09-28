@@ -1,23 +1,23 @@
 Summary:	Access, organize and share your photos with GNOME
 Name:		gnome-photos
-Version:	3.8.2
+Version:	3.10.0
 Release:	1
 License:	GPL v2+
 Group:		X11/Applications
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-photos/3.8/%{name}-%{version}.tar.xz
-# Source0-md5:	34649a651577c51cd52e28c5e3ca8678
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-photos/3.10/%{name}-%{version}.tar.xz
+# Source0-md5:	9f37bf44651583148aaf4be869b8adf3
 URL:		https://live.gnome.org/Design/Apps/Documents
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	clutter-gtk-devel
 BuildRequires:	gettext-devel
 BuildRequires:	gjs-devel
-BuildRequires:	gnome-desktop-devel
-BuildRequires:	gnome-online-accounts-devel
-BuildRequires:	gobject-introspection-devel
-BuildRequires:	gtk+3-devel
+BuildRequires:	gnome-desktop-devel >= 3.10.0
+BuildRequires:	gnome-online-accounts-devel >= 3.10.0
+BuildRequires:	gobject-introspection-devel >= 1.38.0
+BuildRequires:	gtk+3-devel >= 3.10.0
 BuildRequires:	intltool
-BuildRequires:	libgdata-devel
+BuildRequires:	libgdata-devel >= 0.14.0
 BuildRequires:	liboauth-devel
 BuildRequires:	libtool
 BuildRequires:	libzapojit-devel
