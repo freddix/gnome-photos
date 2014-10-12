@@ -1,21 +1,21 @@
 Summary:	Access, organize and share your photos with GNOME
 Name:		gnome-photos
-Version:	3.12.1
+Version:	3.14.0
 Release:	1
 License:	GPL v2+
 Group:		X11/Applications
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-photos/3.12/%{name}-%{version}.tar.xz
-# Source0-md5:	f1480bec5b07d86ed45a9d667677db1e
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-photos/3.14/%{name}-%{version}.tar.xz
+# Source0-md5:	ce71d89e7ad041568e04d491dac9b590
 URL:		https://live.gnome.org/Design/Apps/Documents
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	clutter-gtk-devel
 BuildRequires:	gettext-devel
-BuildRequires:	gjs-devel >= 1.40.0
-BuildRequires:	gnome-desktop-devel >= 3.12.0
-BuildRequires:	gnome-online-accounts-devel >= 3.12.0
-BuildRequires:	gobject-introspection-devel >= 1.40.0
-BuildRequires:	gtk+3-devel >= 3.10.0
+BuildRequires:	gjs-devel >= 1.42.0
+BuildRequires:	gnome-desktop-devel >= 3.14.0
+BuildRequires:	gnome-online-accounts-devel >= 3.14.0
+BuildRequires:	gobject-introspection-devel >= 1.42.0
+BuildRequires:	gtk+3-devel >= 3.14.0
 BuildRequires:	intltool
 BuildRequires:	libgdata-devel >= 0.14.0
 BuildRequires:	libgfbgraph-devel
@@ -23,12 +23,12 @@ BuildRequires:	liboauth-devel
 BuildRequires:	libtool
 BuildRequires:	libzapojit-devel
 BuildRequires:	pkg-config
-BuildRequires:	tracker-devel >= 1.0.0
+BuildRequires:	tracker-devel >= 1.2.0
 Requires(post,postun):	/usr/bin/gtk-update-icon-cache
 Requires(post,postun):	glib-gio-gsettings
-Requires:	gjs >= 1.40.0
+Requires:	gjs >= 1.42.0
 Requires:	hicolor-icon-theme
-Requires:	tracker >= 1.0.0
+Requires:	tracker >= 1.2.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_libexecdir	%{_libdir}/gnome-photos
@@ -84,11 +84,8 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS NEWS README
 %attr(755,root,root) %{_bindir}/gnome-photos
 %{_datadir}/glib-2.0/schemas/*.xml
-%{_datadir}/gnome-photos
 %{_desktopdir}/org.gnome.Photos.desktop
 %{_iconsdir}/hicolor/*/*/*.png
-%dir %{_libexecdir}
-%attr(755,root,root) %{_libexecdir}/gnome-photos-service
 %{_datadir}/dbus-1/services/org.gnome.Photos.service
 %{_datadir}/gnome-shell/search-providers/org.gnome.Photos.search-provider.ini
 
